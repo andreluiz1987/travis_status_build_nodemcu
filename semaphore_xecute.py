@@ -4,8 +4,8 @@ import threading
 import time
 
 success_build_api = "https://api-travis-build.herokuapp.com/api/v1/mcu/actions/success"
-failed_build_api = "https://api-travis-build.herokuapp.com/api/v1/mcu/actions/running"
-running_build_api = "https://api-travis-build.herokuapp.com/api/v1/mcu/actions/failed"
+failed_build_api = "https://api-travis-build.herokuapp.com/api/v1/mcu/actions/failed"
+running_build_api = "https://api-travis-build.herokuapp.com/api/v1/mcu/actions/running"
 
 def post_url(url):     
     r = requests.post(url)   
