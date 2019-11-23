@@ -1,6 +1,7 @@
 import sys
 import requests
 import threading
+import time
 
 success_build_api = "https://api-travis-build.herokuapp.com/api/v1/mcu/actions/success"
 failed_build_api = "https://api-travis-build.herokuapp.com/api/v1/mcu/actions/running"
@@ -21,7 +22,8 @@ def main(argv):
         post_url(failed_build_api)
     elif status == "building":
         post_url(running_build_api)
-
+        time.sleep(5.4)
+        
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print('Usage: python error [success/failure/building]')
