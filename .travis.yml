@@ -7,9 +7,9 @@ before_install:
 install:
 
 script:
-  - python wio_link_execute.py building
+  - python semaphore_xecute.py building
   - python helloworld.py
 after_success:
-  - python wio_link_execute.py success
+  - python semaphore_xecute.py success
 after_failure:
-  - python wio_link_execute.py failure
+  - python semaphore_xecute.py failure
