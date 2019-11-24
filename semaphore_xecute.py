@@ -22,7 +22,7 @@ def main(argv):
         post_url(failed_build_api)
     elif status == "building":
         post_url(running_build_api)
-        time.sleep(5.4)
+        time.sleep(15.4)
         
 if __name__ == "__main__":
     if len(sys.argv) != 2:
